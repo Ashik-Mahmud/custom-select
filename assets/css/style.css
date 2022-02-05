@@ -46,13 +46,27 @@ i.bx.bx-chevron-down.active {
     position: relative;
     border-radius: 5px;
     display: none;
+    animation: fadeUp 0.2s linear 1;
+    animation-play-state: paused;
 
+}
+@keyframes fadeUp {
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 .selected{
     background: #f1f1f1 !important;
 }
 .select-content.active{
+    animation-play-state: running;
     display: block;
+
 }
 .select-content .search-wrapper{
     width: 100%;
